@@ -2,16 +2,19 @@
   "name": "dnd-playground",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.17.0"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "yarn sitemap && next build",
+    "build": "cross-env next build",
     "sitemap": "ts-node --project tsconfig.node.json ./sitemap.config.ts",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "add": "^2.0.6",
-    "next": "12.3.1",
+    "next": "^12.3.1",
     "next-sitemap": "^3.1.43",
     "react": "18.2.0",
     "react-beautiful-dnd": "^13.1.1",
@@ -24,6 +27,7 @@
     "@types/react-beautiful-dnd": "^13.1.2",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.12",
+    "cross-env": "^7.0.3",
     "eslint": "^8.23.1",
     "eslint-config-next": "12.3.1",
     "eslint-config-prettier": "^8.5.0",
